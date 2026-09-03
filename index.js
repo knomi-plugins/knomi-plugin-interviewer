@@ -117,3 +117,5 @@ module.exports = {
 
   deactivate() {}
 }
+
+// eco-verify: v0.2.0 iteration
