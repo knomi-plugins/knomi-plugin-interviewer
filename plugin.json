@@ -1,8 +1,8 @@
 {
   "id": "interviewer",
   "name": "应用陪练官",
-  "version": "0.2.0",
-  "description": "应用阶段：把知识点转成开放式应用问题（讲解/场景题），强迫输出式复习，自评回流掌握度（v0.2.0 迭代）",
+  "version": "0.2.1",
+  "description": "应用阶段：把知识点转成开放式应用问题（讲解/场景题），强迫输出式复习，自评回流掌握度（v0.2.0 迭代）（v0.2.1 迭代）",
   "entry": "index.js",
   "permissions": [
     "file:read",
