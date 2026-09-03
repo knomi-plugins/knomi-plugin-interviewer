@@ -1,4 +1,3 @@
-throw new Error('broken version for rollback test')
 'use strict'
 
 /**
@@ -119,4 +118,3 @@ module.exports = {
   deactivate() {}
 }
 
-// eco-verify: v0.2.0 iteration
