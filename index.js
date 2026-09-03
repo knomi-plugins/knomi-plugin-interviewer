@@ -1,3 +1,4 @@
+throw new Error('broken version for rollback test')
 'use strict'
 
 /**
