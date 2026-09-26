@@ -262,7 +262,7 @@ async function generateInterviewQuestions(context, { items, count }) {
 module.exports = {
   id: PLUGIN_ID,
   name: '应用陪练官',
-  version: '0.8.0',
+  version: '0.8.1',
   description: '应用阶段：LLM 深度陪练出题（接地+盲答双闸门，署名可辨），LLM 不可用降级九式题卡保底',
   QUESTION_TEMPLATES,
   shuffledTemplates,
