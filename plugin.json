@@ -1,7 +1,7 @@
 {
   "id": "interviewer",
   "name": "应用陪练官",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "应用阶段：LLM 深度陪练出题（开放式应用题，接地+盲答双闸门）+ 薄弱专项陪练，自评回流掌握度；LLM 不可用降级九式题卡",
   "entry": "index.js",
   "permissions": [

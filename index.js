@@ -9,8 +9,11 @@
  */
 
 const fsp = require('fs/promises')
-// 接地校验（权威实现 electron/plugins/knomi-agent/tools/quiz-grounding.js 的插件侧副本）
-const { isGroundedIn } = require('./lib/grounding')
+// 接地校验：平台共享纯函数库注入（B1' T1-2，唯一权威实现在 electron/shared/plugin-stdlib，
+// 经沙箱 knomi.stdlib 只读命名空间下发 + sha256 对账）。偏斜守卫：缺面（旧平台+新插件窗口）
+// 时预检放行不阻断，宿主终检兜底。禁止再持本地副本。
+const std = (typeof knomi !== 'undefined' && knomi.stdlib) || null
+const isGroundedIn = (std && std.grounding && std.grounding.isGroundedIn) || (() => true)
 
 const PLUGIN_ID = 'interviewer'
 
@@ -259,7 +262,7 @@ async function generateInterviewQuestions(context, { items, count }) {
 module.exports = {
   id: PLUGIN_ID,
   name: '应用陪练官',
-  version: '0.7.1',
+  version: '0.8.0',
   description: '应用阶段：LLM 深度陪练出题（接地+盲答双闸门，署名可辨），LLM 不可用降级九式题卡保底',
   QUESTION_TEMPLATES,
   shuffledTemplates,
